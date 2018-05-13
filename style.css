@@ -171,7 +171,7 @@ canvas.seen-main {
 
 .circular-portrait {
 	float: right;
-	background: url("../images/portrait.jpg") center;
+	background: url("me.jpg") center;
 	height: 200px;
 	width: 200px;
 	border-radius: 100px;
