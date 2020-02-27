@@ -1,65 +1,203 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-  <title>Matthew Hagan</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-<link href="./style.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
-  <!--Header-->
-  <header>
-   <img src="./logo.png">
-<h1>Matthew Hagan</h1>
-    
-</header>
-<!-- Nav -->
-  <nav class="sticky">
-    <ul class="top-level sticky">
-      <li><a href="./index.html">Home</a></li>
-      <li><a href="./resume.html">Resume</a></li>
-      <li><a href="./business.html">Business</a></li>
-      <li><a href="./personal.html">Personal</a></li>
-    </ul>
-  </nav>
-<main>
-<h1>WELCOME</h1>
- 
-   <div class="circular-portrait"></div>
-<h2>Welcome to my website</h2>
-  
- 
-<p>Hello, I'm Matthew Hagan. I am a Junior at Worcester Polytechnic Institute! I am majoring in Computer Science & Electrical and Computer Engineering. I am passionate about embedded computing, cybersecurity, webdesign, and IoT.</p>
-  <img class="full-width" src="./cabin.jpg">
-  <p>Head over to my <a href="./resume.html">resume</a> section to learn about my accomplishments. If you are here for business purposes, head over to my <a href="./business.html">business</a> section for a pricing and questions. If you want to learn more about me and what I do in my freetime, head over to my <a href="./personal.html">personal</a> section. </p>
-</main>
+	<head>
+		<title>Soteria: a specification based IDS/IPS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
 
-<!-- Footer -->
-<footer id="footer">
-  <section class="about">
-  <h2>About this website</h2>
-  <p>This website was created as a personal project to learn more about web design.</p>
-  <p>As of this moment, the site does not contain that much. I hope in the weeks to come that this site will grow. Thanks!</p>
-  <audio controls autoplay loop>
-  <source src="./vaporwave.mp3">
-     Audio file unable to play
-</audio>
-  </section>
-<section class="contact">
-  <h2>Contact Information</h2>
-  <dl>
-      <dt>Address</dt>
-        <dd>2134 Terrace Drive, Highland's Ranch, CO 80126</dd>
-      <dt>Phone</dt>
-    <dd><a href="tel:+17202916459">(720)291-6459</a></dd>
-      <dt>Email<dt>
-        <dd><a href="mailto:mrhagan@wpi.edu">mrhagan@wpi.edu</a></dd>
-</dl>
-<ul>
-  <li><a href="https://github.com/subbassbro" target="_blank"><span class="fab fa-github" title="GitHub"></a></li>
-  <li><a href="https://www.linkedin.com/in/matthew-hagan-257118136/" target="_blank"><span class="fab fa-linkedin" title="LinkedIn"></a></li>
-  <li><a href="https://www.instagram.com/matt_in_the_hat_hagan/" target="_blank"><span class="fab fa-instagram" title="Instagram"></a></li>
-  <li><a href="mailto:mrhagan@wpi.edu" target="_blank"><span class="fab fa-telegram" title="Telegram"></a></li>
-</ul>
-</footer>
-  </body>
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner split">
+					<section>
+						<h2>Welcome to Soteria, a specification based IDS/IPS designed to make residential networks more secure!</h2>
+					</section>
+					<section>
+						<p>Do you want to make your network more secure? Do you want to use our research? Click the Get Started button to learn more as to how you can use this system for yourself!</p>
+						<ul class="actions">
+							<li><a href="#build" class="button special">Get started</a></li>
+						</ul>
+					</section>
+				</div>
+			</section>
+
+		<!-- What -->
+		<section id="what" class="wrapper style2 alt">
+			<div class="inner split">
+				<section>
+					<h2 id="what-is-it-">What is it?</h2>
+					<p>Stemming from Greek mythology, <a href="https://en.wikipedia.org/wiki/Soteria_(mythology)">Soteria</a> is the greek goddess of safety, salvation, and deliverance from harm. As this system was designed to protect residential networks, the name was well fitting.</p>
+					<p>The project found within this site is a specification based IDS/IPS with the aim of reducing the spread and impact of IoT botnets by blocking malicious outbound traffic from a compromised device. It is a Major Qualifying Project submitted to the faculty of Worcester Polytechnic Institute in partial fulfillment of the requirements for the degree of Bachelor of Science in Computer Science.</p>
+					
+				</section>
+				<section>
+					<ul class="checklist">
+						<li><strong>Soteria is reliable</strong> - Our system needed to be able to be started and stopped many times without issue. Beyond that, as it is a security project, it needs to be able to maintain the security of the system and be robust in that regard.</li>
+						<li><strong>Soteria is efficient</strong> -  As our system is functioning on a routing level, it needs to be able to not weigh down the existing low resource systems found in most residential routers.</li>
+						<li><strong>Soteria is scalable</strong> - this system was designed to be implemented by multiple users, manufacturers and third party security providers.</li>
+					</ul>
+					<ul class="actions">
+						<li><a href="https://github.com/rrlapointe/iot-security-mqp" class="button alt">Learn more</a></li>
+					</ul>
+				</section>
+			</div>
+		</section>
+			<!-- Build -->
+			<section id="build" class="wrapper alt">
+				<h2 id="how-to-build-and-use-it">How to build and use it</h2>
+				<h3 id="middlebox">Middlebox</h3>
+				<p>This system is built with the Rust programming language and the Cargo project manager. The main way that they program will be built, run, and tested is via Cargo.</p>
+				<p>First change to the middlebox directory that contains the Cargo project and the Cargo.toml file:<br/>
+				<code>cd middlebox</code></p>
+				<p>Install the following dependencies with Cargo:<br/>
+				<code>cargo install diesel_cli --no-default-features --features postgres</code></p>
+				<p>In order to build the program from the terminal:<br/>
+				<code>cargo build</code></p>
+				<p>In order to build and then run the program from the terminal:<br/>
+				<code>cargo run</code></p>
+				<p>In order to build and run the unit and integration tests from the terminal:<br/>
+				<code>cargo test</code></p>
+				<p>If you want to have different output printed to the screen export either INFO, DEBUG, or ERROR to the RUST_LOG environment variable.</p>
+				<ul>
+				<li><p>The INFO flag will print information about the threads entering and leaving their loops and if a new policy has been applied for a client.<br/>
+				<code>export RUST_LOG=INFO</code></p>
+				</li>
+				<li><p>The DEBUG flag will print infromation about the amount of bytes recieved by the client, if the signature is verified, data being sent between threads, and data being pulled from the datastore.<br/>
+				<code>export RUST_LOG=DEBUG</code></p>
+				</li>
+				<li><p>The ERROR flag will print any errors that do not stop the program execution from running.<br/>
+				<code>export RUST_LOG=ERROR</code></p>
+				</li>
+				</ul>
+				<p>More information about using Cargo can be found at <a href="https://doc.rust-lang.org/cargo/index.html">https://doc.rust-lang.org/cargo/index.html</a></p>
+				<h3 id="client">Client</h3>
+				<p>As the client did not have as many performance requirements as the middlebox, it was decided to build the project in Python 3, as there is a lot of library support for performing a variety of tasks. The first thing needed to get the client up and running is Python3. Real Python has outlined a simple guide to install it on a variety of operating systems at <a href="https://realpython.com/installing-python/">https://realpython.com/installing-python/</a>. Once Python 3 is installed, the user needs to create  a virtual environment. Virtual environments allows users to create their own isolated site directories, such that only the required packages and nothing more needs to exist in the environment. To create a virtual environment, type <code>python3 -m venv /path/to/new/virtual/environment</code>. Pip is the prefered installer program. Starting with Python 3.4, it is included by default with the Python installation. Once the environment is created, you need to source the environment. This is a way of loading into the enviorment with the required packages such that when you run the python scripts they will work as desired. this is done by typing <code>$source environment_name/bin/activate</code>. To unsource the environment, type <code>$deactivate</code>. While in the environment, there are a few packages that need to be installed. To make it simple for the user, we make a requirements.txt file that will tell pip which packages to install. To install the packages, type <code>pip install -r requirement.txt</code>. As a note, pip is installed by default after Python version 3.4. Once this is done, running the project can be done by typing <code>python3 -m iot_client_sim</code>. This will run the <strong>main</strong>.py file which will then trigger trigger the normal_traffic.py and send_advertisement.py on regular intervals.</p>
+		</section>	
+		<!-- How -->
+		<section id="how" class="wrapper style2 alt">
+	
+			<section>
+				<h2 id="how-it-works">How it works</h2>
+				<h3 id="middlebox">Middlebox</h3>
+				<h4 id="advertisements">Advertisements</h4>
+				<p>The advertisement thread runs from the advertisement.rs file. This thread will infinitely loop, recieveing connections and processing them. The code will check if it has recieved a policy with a valid certificate. If it has, the new policy will be added to the database or updated if the reviision number of the new polcicy is higher than the current policy. If the certificate is not valid or the revision nunmber is lower, the new policy will not be added to the database. Both of these two conditions together protect our system from Man-in-the-middle attacks and replay attacks.</p>
+				<h4 id="firewall">Firewall</h4>
+				<h4 id="tls-interception">TLS Interception</h4>
+				<p>The middlebox receives TLS key information in SSLKEYLOGFILE format transmitted to it by the client. The key information is fed to Tshark, which decrypts the HTTPS connection. Tshark tells our middlebox code the contents of the HTTP host header, which is then used for enforcing firewall policy.</p>
+				<p>The decryption process occurs periodically. Every ?? milliseconds any HTTP host headers from the last ?? milliseconds are obtained. Ideally we would want the decryption to happen in real-time but we did what we could for this proof-of-concept project.</p>
+				<h4 id="centralized-policy-manager">Centralized Policy Manager</h4>
+				<h3 id="client">Client</h3>
+				<p>The client’s primary goal is to simulate normal traffic and send advertisements.  Utilizing  the  Tox  tool  with  thePyLint and Flake8 plugins, the team was able to ensure code is standardized and will run without problems from multiple developers. Within the client code, there are three primary files that get run. The first file is normal_traffic.py. This file is responsible for generating normal network traffic outlined below. The second file is send_advertisement.py. This file is responsible for sending the multicasted advertisement. The final file is a __main__.py. This file is responsible for running both normal_traffic.py and send_advertisement.py. It first creates a thread for each file. After that, it will run normal_traffic.py on every three second interval and send_advertisement.py on every five second interval. This timing allows for the there to be non-collisions, near collisions, and collisions within the network.</p>				
+			</section>
+		
+	</section>
+		<!-- Why -->
+		<section id="why" class="wrapper alt">
+	
+				<section>
+					<h2 id="why-we-did-it-">Why we built it?</h2>
+					<p>As consumer home automation devices are rapidly gaining popularity, more and more examples exist of these devices being compromised at scale to create large botnets. While it would seem obvious that security is a priority for device manufacturers, that is not always the case. This project was design to have the ability to alert the owner of compromised IoT devices so that they can take remedial action. Beyond that, it is able to to alert the manufacturer of compromised IoT devices so that the manufacturer can have increased awareness of vulnerabilities being exploited in the wild.  Finally, we expect that with adoption, it will help prevent further IoT device exploitation’s given the increased awareness on the manufacturer’s behalf.</p>
+					<p>If you would like to learn more about this project, please feel free to check out our research paper at the button below: </p>
+					<ul class="actions">
+						<li><a href="https://cerebro.cs.wpi.edu:4443/project/5d8cd1bf464b68793d2601d9" class="button alt">Research Paper</a></li>
+					</ul>
+				</section>
+			
+		</section>
+
+		<!-- Contact -->
+		<section id="contact" class="wrapper style2 alt">
+			<section>
+				<h2>Meet the Team</h2>
+			</section>
+			<div class="inner">
+				<div class="spotlight">
+					<div class="image">
+						<img src="images/mrhagan.jpg" alt="" />
+					</div>
+					<div class="content">
+						<h3>Matthew Hagan</h3>
+						<p>Matthew Hagan is a senior double major in Computer Science and Electrical/Computer Engineering with a concentration in Cyber Security. Functioning as the project manager, he was primarily responcibple for motivating the project and ensuring that the team was able to meet the desired deadlines. Beyond this, he was responsible for the client code, cross compilation efforts, OpenWRT router and WAP setup, user notifications on the middlebox, parts of the diesel database, large sections of the paper, and this website.</p>
+						<p>To learn more about Matt, please feel free to visit his Github linked below or to shoot him an email using the buttons below:</p>
+						<ul class="actions">
+							<li><a href="https://github.com/subbassbro" class="button alt">Github</a></li>
+							<li><a href="mailto:mrhagan@wpi.edu" class="button alt">Email</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="spotlight">
+					<div class="image">
+						<img src="images/rlapointe.jpg" alt="" />
+					</div>
+					<div class="content">
+						<h3>Ryan LaPointe</h3>
+						<p>Lorem ipsum nisl sed cursus magna et amet veroeros. Sed phasellus malesuada quis orci. Pellentesque eget consequat.</p>
+						<ul class="actions">
+							<li><a href="https://github.com/rrlapointe" class="button alt">Github</a></li>
+							<li><a href="mailto:rlapointe@wpi.edu" class="button alt">Email</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="spotlight">
+					<div class="image">
+						<img src="images/pjmaida.jpg" alt="" />
+					</div>
+					<div class="content">
+						<h3>Peter Maida</h3>
+						<p>I’m pursing a masters degree at WPI. I am interested in cybersecurity and the defense sector. My favorite programming language to develop in is Java, but I have had experience with C, C++, Python, and Rust. Some of my hobbies include working on side projects, playing video games, exercising, and hanging out with friends.</p>
+						<ul class="actions">
+							<li><a href="https://github.com/PeterMaidaRobot" class="button alt">Github</a></li>
+							<li><a href="mailto:pjmaida@wpi.edu" class="button alt">Email</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="spotlight">
+					<div class="image">
+						<img src="images/cshue.jpg" alt="" />
+					</div>
+					<div class="content">
+						<h3>Professor Craig Shue</h3>
+						<p>Craig Shue is an Associate Professor in the Computer Science Department and the Cyber Security Program at the Worcester Polytechnic Institute. He served as one of the advisors to this project, advising the computer science students within the research space.</p>
+						<p>To learn more about Craig, please feel free to visit his webpage linked below or to shoot him an email using the buttons below:</p>
+						<ul class="actions">
+							<li><a href="https://web.cs.wpi.edu/~cshue/" class="button alt">Webpage</a></li>
+							<li><a href="mailto:cshue@wpi.edu" class="button alt">Email</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="spotlight">
+					<div class="image">
+						<img src="images/sunar.jpg" alt="" />
+					</div>
+					<div class="content">
+						<h3>Professor Berk Sunar</h3>
+						<p>Berk Sunar is an Associate Professor in the Electrical and Computer Engineering Department at the Worcester Polytechnic Institute. He served as one of the advisors to this project, advising the electrical and computer engineering student within the research space.</p>
+						<p>To learn more about Craig, please feel free to visit his webpage linked below or to shoot him an email using the buttons below:</p>
+						<ul class="actions">
+							<li><a href="https://www.wpi.edu/people/faculty/sunar" class="button alt">Webpage</a></li>
+							<li><a href="mailto:sunar@wpi.edu" class="button alt">Email</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="copyright">
+					&copy; <a href="#banner">Soteria IDS/IPS</a>. All rights reserved. Source code: <a href="https://github.com/rrlapointe/iot-security-mqp">https://github.com/rrlapointe/iot-security-mqp</a>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
